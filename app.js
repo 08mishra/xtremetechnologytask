@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 
  
-mongoose.connect("mongodb+srv://admin-prashant:852000@cluster0.fp9pt.mongodb.net/userDB", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const userSchema=  {
     name:String,
